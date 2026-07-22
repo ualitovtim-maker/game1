@@ -793,12 +793,6 @@
       pointer-events: none;
     }
 
-    
-
-    
-
-    
-
     .tip {
       margin: 12px 0 0;
       color: var(--muted);
@@ -1090,6 +1084,10 @@
         padding: 10px;
       }
 
+      .app {
+        gap: 10px;
+      }
+
       .hud {
         grid-template-columns: 1fr;
         gap: 8px;
@@ -1100,25 +1098,25 @@
       }
 
       .scene {
-        height: 230px;
+        height: 200px;
       }
 
       .fighter {
-        width: 80px;
+        width: 70px;
         height: 110px;
-        bottom: 28px;
+        bottom: 22px;
       }
 
       .fighter.player {
-        left: calc(var(--player-x) - 40px);
+        left: calc(var(--player-x) - 35px);
       }
 
       .fighter.enemy {
-        left: calc(var(--enemy-x) - 40px);
+        left: calc(var(--enemy-x) - 35px);
       }
 
       .sprite {
-        font-size: 3.6rem;
+        font-size: 3.2rem;
       }
 
       .prompt-head {
@@ -1127,11 +1125,57 @@
 
       .card-grid {
         grid-template-columns: repeat(2, minmax(0, 1fr));
-        gap: 10px;
+        gap: 8px;
       }
 
       .card-grid.two-card {
         grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 8px;
+        justify-content: stretch;
+      }
+
+      .play-card {
+        aspect-ratio: 0.65;
+        padding: 10px;
+      }
+
+      .card-body {
+        gap: 6px;
+        padding-top: 28px;
+      }
+
+      .card-title {
+        font-size: 0.95rem;
+      }
+
+      .card-copy {
+        font-size: 0.75rem;
+        max-width: 16ch;
+      }
+
+      .card-tag {
+        font-size: 0.6rem;
+        padding: 4px 8px;
+      }
+
+      .card-price {
+        font-size: 0.7rem;
+        padding: 5px 8px;
+      }
+
+      .card-glyph {
+        font-size: clamp(2.5rem, 5vw, 3.6rem);
+      }
+
+      .card-corner {
+        font-size: 0.74rem;
+        left: 8px;
+        top: 8px;
+      }
+
+      .card-corner.bottom {
+        right: 8px;
+        bottom: 8px;
       }
 
       .modal-top {
@@ -1162,7 +1206,83 @@
     @media (max-width: 420px) {
       .card-grid,
       .card-grid.two-card {
-        grid-template-columns: 1fr;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 6px;
+      }
+
+      body {
+        padding: 8px;
+      }
+
+      .app {
+        gap: 8px;
+      }
+
+      .scene {
+        height: 180px;
+      }
+
+      .fighter {
+        width: 60px;
+        height: 90px;
+        bottom: 18px;
+      }
+
+      .fighter.player {
+        left: calc(var(--player-x) - 30px);
+      }
+
+      .fighter.enemy {
+        left: calc(var(--enemy-x) - 30px);
+      }
+
+      .sprite {
+        font-size: 2.8rem;
+      }
+
+      .play-card {
+        aspect-ratio: 0.63;
+        padding: 8px;
+      }
+
+      .card-body {
+        gap: 4px;
+        padding-top: 20px;
+      }
+
+      .card-title {
+        font-size: 0.85rem;
+      }
+
+      .card-copy {
+        font-size: 0.7rem;
+        max-width: 14ch;
+      }
+
+      .card-tag {
+        font-size: 0.55rem;
+        padding: 3px 6px;
+      }
+
+      .card-price {
+        font-size: 0.65rem;
+        padding: 4px 6px;
+        gap: 4px;
+      }
+
+      .card-glyph {
+        font-size: clamp(2rem, 4vw, 3rem);
+      }
+
+      .card-corner {
+        font-size: 0.65rem;
+        left: 6px;
+        top: 6px;
+      }
+
+      .card-corner.bottom {
+        right: 6px;
+        bottom: 6px;
       }
     }
 
